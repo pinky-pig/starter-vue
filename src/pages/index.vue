@@ -13,7 +13,7 @@ import { AnimatedTooltip } from '@arvin/materials'
     </h1>
 
     <p>
-      <em class="text-sm opacity-75">A simple component for Vue3.</em>
+      <em class="text-sm opacity-75">A simple template for Vue3.</em>
     </p>
 
     <div

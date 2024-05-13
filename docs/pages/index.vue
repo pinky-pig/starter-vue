@@ -9,7 +9,7 @@
     </h1>
 
     <p>
-      <em class="text-sm opacity-75">A simple bento layout component for Vue3.</em>
+      <em class="text-sm opacity-75">A simple template for Vue3.</em>
     </p>
 
     <div class="flex flex-row justify-center items-center gap-2 mt-5">

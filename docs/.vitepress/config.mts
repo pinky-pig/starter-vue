@@ -10,7 +10,7 @@ const ENV = { ...loadEnv('development', process.cwd()) }
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: ENV.VITE_PKG_NAME,
-  description: 'A simple bento layout component for Vue3.',
+  description: 'A simple template component for Vue3.',
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
