@@ -1,4 +1,4 @@
-# starter-vue-lib
+# starter-vue
 
 - vite vue vueuse vue-router
 - shadcn-vue
@@ -103,7 +103,7 @@ npm run docs:preview
 使用此仓库后，如果需要合本仓库的最新代码，添加远程仓库后，拉取代码。
 
 ```bash
-git pull --tags starter-vue-lib main --allow-unrelated-histories
+git pull --tags starter-vue main --allow-unrelated-histories
 ```
 
 ## 添加自己的包
