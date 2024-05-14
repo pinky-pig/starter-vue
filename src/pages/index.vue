@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { AnimatedTooltip, FlipCard } from '@arvin/materials'
+import { AnimatedTooltip, FlipCard, GenerateButton } from '@arvin/materials'
 </script>
 
 <template>
@@ -28,6 +28,7 @@ import { AnimatedTooltip, FlipCard } from '@arvin/materials'
 
     <AnimatedTooltip />
     <FlipCard />
+    <GenerateButton />
 
     <TheFooter />
 

@@ -14,6 +14,9 @@ module.exports = {
     './src/**/*.{ts,tsx,vue}',
     './docs/.vitepress/**/*.{js,ts,vue}',
     './docs/**/*.md',
+
+    // packages 包
+    './packages/**/*.vue',
   ],
 
   theme: {
