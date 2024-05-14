@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { FlipCard, GenerateButton, SketchButton } from '@arvin/materials'
+import { GenerateButton, SketchButton } from '@arvin/materials'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { FlipCard, GenerateButton, SketchButton } from '@arvin/materials'
     <BentoIcon class="w-12 h-12 inline-block mb-4" />
 
     <h1 class="text-4xl font-bold mb-2">
-      Starte Vue
+      Starter Vue
     </h1>
 
     <p>
@@ -27,7 +27,7 @@ import { FlipCard, GenerateButton, SketchButton } from '@arvin/materials'
     </div>
 
     <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
-      <FlipCard />
+      <!-- <FlipCard /> -->
     </div>
 
     <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
