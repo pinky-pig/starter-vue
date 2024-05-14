@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { AnimatedTooltip, FlipCard, GenerateButton } from '@arvin/materials'
+import { FlipCard, GenerateButton } from '@arvin/materials'
 </script>
 
 <template>
@@ -26,9 +26,18 @@ import { AnimatedTooltip, FlipCard, GenerateButton } from '@arvin/materials'
       <Installation />
     </div>
 
-    <AnimatedTooltip />
-    <FlipCard />
-    <GenerateButton />
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <FlipCard />
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
+      <h2>Some Buttons</h2>
+      <div class="w-full flex flex-row flex-wrap gap-4">
+        <GenerateButton />
+      </div>
+    </div>
 
     <TheFooter />
 
