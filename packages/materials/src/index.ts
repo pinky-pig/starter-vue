@@ -1,9 +1,10 @@
 import FlipCard from './lib/flip-card'
-import GenerateButton from './lib/some-buttons'
+import { GenerateButton, SketchButton } from './lib/some-buttons'
 
 export {
   FlipCard,
   GenerateButton,
+  SketchButton,
 }
 
 export * from './types'

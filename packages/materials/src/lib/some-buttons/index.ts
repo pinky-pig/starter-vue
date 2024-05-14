@@ -1,3 +1,4 @@
 import GenerateButton from './GenerateButton.vue'
+import SketchButton from './SketchButton.vue'
 
-export default GenerateButton
+export { GenerateButton, SketchButton }
