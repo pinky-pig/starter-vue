@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { GenerateButton, SketchButton } from '@arvin/materials'
+import { GenerateButton, Meteors, SketchButton } from '@arvin/materials'
 </script>
 
 <template>
@@ -40,6 +40,14 @@ import { GenerateButton, SketchButton } from '@arvin/materials'
           SketchButton
         </SketchButton>
       </div>
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
+      <h2>Meteor Effect</h2>
+
+      <MeteorCard />
     </div>
 
     <TheFooter />

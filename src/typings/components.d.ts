@@ -34,6 +34,7 @@ declare module 'vue' {
     MenubarSubContent: typeof import('./../components/ui/menubar/MenubarSubContent.vue')['default']
     MenubarSubTrigger: typeof import('./../components/ui/menubar/MenubarSubTrigger.vue')['default']
     MenubarTrigger: typeof import('./../components/ui/menubar/MenubarTrigger.vue')['default']
+    MeteorCard: typeof import('./../components/demo/MeteorCard.vue')['default']
     ResizableHandle: typeof import('./../components/ui/resizable/ResizableHandle.vue')['default']
     ResizablePanelGroup: typeof import('./../components/ui/resizable/ResizablePanelGroup.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
