@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { GenerateButton, SketchBlockButton, SketchButton } from '@arvin/materials'
+import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
 </script>
 
 <template>
@@ -53,6 +53,24 @@ import { GenerateButton, SketchBlockButton, SketchButton } from '@arvin/material
       <MeteorCard />
     </div>
 
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
+      <h2>Wire Card</h2>
+
+      <WireCard>
+        <div class="p-4 w-80 h-60 ">
+          <h4 class="text-black font-bold tracking-wide mt-4">
+            WireCard
+          </h4><p class="mt-8 text-zinc-400 tracking-wide text-sm">
+            背景是引入一个 SVG ，圆角是使用了 css-houdini-squircle， 三层 DOM 嵌套 Slot 内容。
+          </p>
+        </div>
+      </WireCard>
+    </div>
+
+    <br>
+    <br>
     <TheFooter />
 
     <Sonner
