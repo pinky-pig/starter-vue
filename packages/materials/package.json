@@ -6,12 +6,15 @@
   },
   "typesVersions": {
     "*": {
-      "*": ["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     }
   },
   "dependencies": {
     "@arvin/utils": "workspace:*",
-    "simplebar-vue": "2.3.4"
+    "simplebar-vue": "2.3.4",
+    "simplex-noise": "^4.0.1"
   },
   "devDependencies": {
     "typed-css-modules": "0.9.1"

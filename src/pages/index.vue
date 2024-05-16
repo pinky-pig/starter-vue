@@ -48,6 +48,14 @@ import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvi
     <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
       <br>
       <br>
+      <h2>Wavy Effect</h2>
+
+      <WavyBackgroundPage />
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
       <h2>Meteor Effect</h2>
 
       <MeteorCard />

@@ -54,5 +54,6 @@ declare module 'vue' {
     TabsList: typeof import('./../components/ui/tabs/TabsList.vue')['default']
     TabsTrigger: typeof import('./../components/ui/tabs/TabsTrigger.vue')['default']
     TheFooter: typeof import('./../components/layout/TheFooter.vue')['default']
+    WavyBackgroundPage: typeof import('./../components/demo/WavyBackgroundPage.vue')['default']
   }
 }

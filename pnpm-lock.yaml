@@ -183,6 +183,9 @@ importers:
       simplebar-vue:
         specifier: 2.3.4
         version: 2.3.4(vue@3.4.27)
+      simplex-noise:
+        specifier: ^4.0.1
+        version: 4.0.1
     devDependencies:
       typed-css-modules:
         specifier: 0.9.1
@@ -6135,6 +6138,10 @@ packages:
       vue-demi: 0.13.11(vue@3.4.27)
     transitivePeerDependencies:
       - '@vue/composition-api'
+    dev: false
+
+  /simplex-noise@4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
     dev: false
 
   /sisteransi@1.0.5:
