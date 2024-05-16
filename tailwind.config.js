@@ -17,7 +17,7 @@ module.exports = {
     './docs/**/*.md',
 
     // packages 包
-    './packages/**/*.vue',
+    './packages/**/*.{ts,tsx,vue}',
   ],
 
   theme: {
