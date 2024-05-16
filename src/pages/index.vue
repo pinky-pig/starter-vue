@@ -6,7 +6,7 @@ import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvi
   <div class="w-full h-full flex flex-col items-center justify-center text-center px-4 pt-10">
     <div class="py-8" />
 
-    <BentoIcon class="w-12 h-12 inline-block mb-4" />
+    <AppIcon class="w-12 h-12 inline-block mb-4" />
 
     <h1 class="text-4xl font-bold mb-2">
       Starter Vue

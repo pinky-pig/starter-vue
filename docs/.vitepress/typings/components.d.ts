@@ -9,7 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Badge: typeof import('./../../../src/components/ui/badge/Badge.vue')['default']
     BentoEvents: typeof import('./../../../src/components/layout/events/BentoEvents.vue')['default']
-    BentoIcon: typeof import('./../../../src/components/icons/BentoIcon.vue')['default']
+    AppIcon: typeof import('./../../../src/components/icons/AppIcon.vue')['default']
     BentoItemProperties: typeof import('./../../../src/components/layout/properties/BentoItemProperties.vue')['default']
     BentoItemUsage: typeof import('./../../../src/components/layout/usage/BentoItemUsage.vue')['default']
     BentoProperties: typeof import('./../../../src/components/layout/properties/BentoProperties.vue')['default']
