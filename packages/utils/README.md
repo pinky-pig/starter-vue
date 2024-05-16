@@ -10,11 +10,15 @@
 ## 安装
 
 ```bash
-pnpm install @arvin/utils
+pnpm install @arvin/utils -w
 ```
 
 ## 使用
 
 ```js
-``
+import { sleep } from '@arvin/utils'
+console.log(111)
+sleep(3000).then(() => {
+  console.log(222)
+})
 ```
