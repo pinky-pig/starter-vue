@@ -1,4 +1,5 @@
 const animate = require('tailwindcss-animate')
+// https://github.com/egoist/tailwindcss-icons
 const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons')
 
 /** @type {import('tailwindcss').Config} */

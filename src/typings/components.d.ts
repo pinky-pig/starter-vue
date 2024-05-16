@@ -18,6 +18,7 @@ declare module 'vue' {
     CardTitle: typeof import('./../components/ui/card/CardTitle.vue')['default']
     Code: typeof import('./../components/layout/Code.vue')['default']
     CodePreview: typeof import('./../components/layout/CodePreview.vue')['default']
+    IconifyDemo: typeof import('./../components/demo/IconifyDemo.vue')['default']
     Installation: typeof import('./../components/layout/Installation.vue')['default']
     Menubar: typeof import('./../components/ui/menubar/Menubar.vue')['default']
     MenubarCheckboxItem: typeof import('./../components/ui/menubar/MenubarCheckboxItem.vue')['default']

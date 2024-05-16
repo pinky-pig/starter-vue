@@ -48,6 +48,13 @@ import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvi
     <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
       <br>
       <br>
+      <h2>Iconify</h2>
+      <IconifyDemo />
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
       <h2>Wavy Effect</h2>
 
       <WavyBackgroundPage />

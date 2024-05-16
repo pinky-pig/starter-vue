@@ -5,6 +5,7 @@
 - tailwindcss
 - vitepress
 - vite-lib npm package
+- iconify - <https://github.com/egoist/tailwindcss-icons>
 
 ## 开发
 
