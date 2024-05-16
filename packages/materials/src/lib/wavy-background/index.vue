@@ -35,6 +35,12 @@ const waveColors = props.colors ?? [
   '#22d3ee',
 ]
 
+const isSafari = computed(() => {
+  return typeof window !== 'undefined'
+    && navigator.userAgent.includes('Safari')
+    && !navigator.userAgent.includes('Chrome')
+})
+
 function getSpeed() {
   switch (props.speed) {
     case 'slow':
@@ -51,7 +57,7 @@ function init() {
   ctx = canvas.getContext('2d')
   w = ctx.canvas.width = wavyRef.value!.clientWidth
   h = ctx.canvas.height = wavyRef.value!.clientHeight
-  ctx.filter = `blur(${blur}px)`
+  ctx.filter = `blur(${props.blur}px)`
   nt = 0
 
   wavyRef.value!.onresize = function () {
@@ -104,8 +110,10 @@ onMounted(() => {
       ref="canvasRef"
       class="absolute inset-0 z-0"
       :style="{
-        transform: `scale(${1 + (blur / 100)})`,
-        filter: `blur(${blur}px)`,
+        ...(isSafari ? {
+          filter: `blur(${blur}px)`,
+          transform: `scale(${1 + (blur / 100)})`,
+        } : {}),
       }"
     />
     <div class="relative z-10">
