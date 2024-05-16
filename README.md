@@ -131,7 +131,7 @@ pnpm i dayjs -r --filter @test/web
 
 ```bash
 # 这个包已经在 packages 中声明
-pnpm i @arvin/materials
+pnpm i @arvin/materials -w
 ```
 
 然后在组件中使用
