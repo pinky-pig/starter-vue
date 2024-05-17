@@ -1,5 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
+import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
 </script>
 
 <template>
@@ -39,6 +39,9 @@ import { GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvi
         <SketchButton>
           SketchButton
         </SketchButton>
+        <BevelButton>
+          BevelButton
+        </BevelButton>
         <SketchBlockButton>
           SketchBlockButton
         </SketchBlockButton>
