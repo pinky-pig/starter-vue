@@ -20,6 +20,7 @@ declare module 'vue' {
     CodePreview: typeof import('./../components/layout/CodePreview.vue')['default']
     IconifyDemo: typeof import('./../components/demo/IconifyDemo.vue')['default']
     Installation: typeof import('./../components/layout/Installation.vue')['default']
+    MapsDemo: typeof import('./../components/demo/MapsDemo.vue')['default']
     Menubar: typeof import('./../components/ui/menubar/Menubar.vue')['default']
     MenubarCheckboxItem: typeof import('./../components/ui/menubar/MenubarCheckboxItem.vue')['default']
     MenubarContent: typeof import('./../components/ui/menubar/MenubarContent.vue')['default']

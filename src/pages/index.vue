@@ -1,5 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
+import { MapboxMap } from '@arvin/maps'
 </script>
 
 <template>
@@ -85,6 +86,14 @@ import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard 
           </p>
         </div>
       </WireCard>
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
+      <h2>Maps</h2>
+
+      <MapsDemo />
     </div>
 
     <br>
