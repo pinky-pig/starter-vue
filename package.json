@@ -26,14 +26,14 @@
     "@arvin/utils": "workspace:^"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.17.0",
+    "@antfu/eslint-config": "^2.18.0",
     "@egoist/tailwindcss-icons": "^1.8.0",
     "@iconify-json/carbon": "^1.1.33",
     "@iconify-json/lucide": "^1.1.187",
-    "@iconify/json": "^2.2.209",
-    "@microsoft/api-extractor": "^7.43.4",
+    "@iconify/json": "^2.2.210",
+    "@microsoft/api-extractor": "^7.43.7",
     "@types/clean-css": "^4.2.11",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
@@ -58,14 +58,14 @@
     "radix-vue": "^1.7.4",
     "rimraf": "^5.0.7",
     "shadcn-vue": "^0.10.4",
-    "shiki": "^1.5.1",
+    "shiki": "^1.5.2",
     "simple-git": "^3.24.0",
     "simple-git-hooks": "^2.11.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
     "taze": "^0.13.8",
-    "tsx": "^4.10.1",
+    "tsx": "^4.10.3",
     "typescript": "^5.4.5",
     "unplugin-auto-import": "^0.17.6",
     "unplugin-vue-components": "^0.27.0",
@@ -78,7 +78,7 @@
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "vue-sonner": "^1.1.2",
-    "vue-tsc": "^2.0.17"
+    "vue-tsc": "^2.0.19"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
