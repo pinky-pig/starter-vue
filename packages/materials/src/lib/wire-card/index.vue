@@ -33,7 +33,7 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
 
 <template>
   <div class="wire-card w-fit h-fit z-1 relative rounded-[.5rem] box-border ">
-    <div :class="`bg-[${borderColor}]`" class="wire-card-inner w-full h-full p-1">
+    <div class="wire-card-inner bg-[var(--border-color)] w-full h-full p-1">
       <div class="wire-card-content w-full h-full bg-gray-100">
         <slot />
       </div>
@@ -45,6 +45,7 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
 <style scoped>
 .wire-card-inner,
 .wire-card-content {
+  --border-color: v-bind(borderColor);
   -webkit-mask-image: paint(squircle);
   mask-image: paint(squircle);
   --squircle-radius: 16px;
