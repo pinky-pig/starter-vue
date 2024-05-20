@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { MapboxMap } from '@arvin/maps'
-// <MapboxMap class="rounded-lg" />
+import { MapboxMap, OpenLayersMap } from '@arvin/maps'
 </script>
 
 <template>
@@ -14,13 +13,19 @@ import { MapboxMap } from '@arvin/maps'
           >
             Mapbox
           </TabsTrigger>
+          <TabsTrigger
+            value="OpenLayers"
+            class="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+          >
+            OpenLayers
+          </TabsTrigger>
         </TabsList>
       </div>
       <TabsContent value="Mapbox" class="relative rounded-md border overflow-hidden">
         <MapboxMap class=" !h-[400px]" />
       </TabsContent>
-      <TabsContent value="code">
-        <slot name="code" />
+      <TabsContent value="OpenLayers">
+        <OpenLayersMap class=" !h-[400px]" />
       </TabsContent>
     </Tabs>
   </div>

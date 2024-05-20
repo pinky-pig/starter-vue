@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import mapboxgl from 'mapbox-gl'
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 const props = withDefaults(
   defineProps<{
     options?: any
-    token?: string
-    style?: string
   }>(),
   {
     options: () => ({
@@ -43,7 +41,7 @@ function initMap(option: any) {
 </template>
 
 <style>
-@import url('mapbox-gl/dist/mapbox-gl.css');
+/* 样式需要加载一下，这里在 index.ts 中加载了 */
 
 /* mapbox display */
 a.mapboxgl-ctrl-logo {

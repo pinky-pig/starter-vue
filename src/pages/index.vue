@@ -1,6 +1,5 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
-import { MapboxMap } from '@arvin/maps'
 </script>
 
 <template>

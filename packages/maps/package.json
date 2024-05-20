@@ -15,6 +15,7 @@
     "@arvin/utils": "workspace:*",
     "@types/mapbox-gl": "^3.1.0",
     "mapbox-gl": "^3.3.0",
+    "ol": "^9.2.2",
     "simplebar-vue": "2.3.4",
     "simplex-noise": "^4.0.1"
   },
