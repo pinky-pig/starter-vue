@@ -6,6 +6,7 @@ import { defineConfig, loadEnv, mergeConfig } from 'vite'
 
 import CleanCSS from 'clean-css'
 import baseConfig from './vite.base.config'
+import cesiumConfig from './vite.cesium.config'
 
 const cleanCssInstance = new CleanCSS({})
 function minify(code: string) {
@@ -87,10 +88,13 @@ export default defineConfig(({ mode }) => {
     })
   }
   else {
-    return mergeConfig(baseConfig, {
-      build: {
-        outDir: 'dist',
-      },
-    })
+    return mergeConfig(
+      mergeConfig(baseConfig, {
+        build: {
+          outDir: 'dist',
+        },
+      }),
+      cesiumConfig,
+    )
   }
 })

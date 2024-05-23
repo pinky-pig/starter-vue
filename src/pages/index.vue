@@ -1,5 +1,6 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard } from '@arvin/materials'
+import CesiumMap from '@/cesium/CesiumMap.vue'
 </script>
 
 <template>
@@ -93,6 +94,13 @@ import { BevelButton, GenerateButton, SketchBlockButton, SketchButton, WireCard 
       <h2>Maps</h2>
 
       <MapsDemo />
+    </div>
+
+    <div class="w-full max-w-[652px] mx-auto text-start px-[16px]">
+      <br>
+      <br>
+      <h2>Cesium</h2>
+      <CesiumMap />
     </div>
 
     <br>

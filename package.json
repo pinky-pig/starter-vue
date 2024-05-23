@@ -24,7 +24,10 @@
   "dependencies": {
     "@arvin/maps": "workspace:^",
     "@arvin/materials": "workspace:^",
-    "@arvin/utils": "workspace:^"
+    "@arvin/utils": "workspace:^",
+    "@types/cesium": "^1.70.0",
+    "cesium": "^1.117.0",
+    "vite-plugin-cesium": "^1.2.22"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.0",
