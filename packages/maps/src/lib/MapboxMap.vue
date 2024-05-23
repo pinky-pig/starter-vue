@@ -21,7 +21,9 @@ let map: mapboxgl.Map | null
 const mapContainer = ref(null)
 
 onMounted(() => {
-  initMap(props.options)
+  setTimeout(() => {
+    initMap(props.options)
+  })
 })
 onUnmounted(() => {
   map!.remove()

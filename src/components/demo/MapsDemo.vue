@@ -24,7 +24,7 @@ import { MapboxMap, OpenLayersMap } from '@arvin/maps'
       <TabsContent value="Mapbox" class="relative rounded-md border overflow-hidden">
         <MapboxMap class=" !h-[400px]" />
       </TabsContent>
-      <TabsContent value="OpenLayers">
+      <TabsContent value="OpenLayers" class="relative rounded-md border overflow-hidden">
         <OpenLayersMap class=" !h-[400px]" />
       </TabsContent>
     </Tabs>
