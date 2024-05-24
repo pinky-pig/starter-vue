@@ -31,7 +31,6 @@
     "vite-plugin-cesium": "^1.2.22"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.18.0",
     "@arvinn/eslint-config": "^0.0.4",
     "@arvinn/prettier-config": "^0.0.1",
     "@egoist/tailwindcss-icons": "^1.8.0",
@@ -53,7 +52,6 @@
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
     "eslint": "^9.2.0",
-    "eslint-plugin-format": "^0.1.1",
     "fs": "0.0.1-security",
     "https-localhost": "^4.7.1",
     "jsdom": "^24.0.0",
