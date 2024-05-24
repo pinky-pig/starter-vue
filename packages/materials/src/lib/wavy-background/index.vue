@@ -2,18 +2,21 @@
 import { computed, onMounted, ref } from 'vue'
 import { createNoise3D } from 'simplex-noise'
 
-const props = withDefaults(defineProps<{
-  blur?: number
-  speed?: 'slow' | 'fast'
-  colors?: string
-  waveWidth?: number
-  waveOpacity?: number
-  backgroundFill?: string
-}>(), {
-  blur: 10,
-  speed: 'fast',
-  waveOpacity: 0.5,
-})
+const props = withDefaults(
+  defineProps<{
+    blur?: number
+    speed?: 'slow' | 'fast'
+    colors?: string
+    waveWidth?: number
+    waveOpacity?: number
+    backgroundFill?: string
+  }>(),
+  {
+    blur: 10,
+    speed: 'fast',
+    waveOpacity: 0.5,
+  },
+)
 
 const noise = createNoise3D()
 let w: number,
@@ -36,9 +39,11 @@ const waveColors = props.colors ?? [
 ]
 
 const isSafari = computed(() => {
-  return typeof window !== 'undefined'
-    && navigator.userAgent.includes('Safari')
-    && !navigator.userAgent.includes('Chrome')
+  return (
+    typeof window !== 'undefined' &&
+    navigator.userAgent.includes('Safari') &&
+    !navigator.userAgent.includes('Chrome')
+  )
 })
 
 function getSpeed() {
@@ -101,19 +106,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    ref="wavyRef"
-    class="relative flex flex-col items-center justify-center"
-  >
+  <div ref="wavyRef" class="relative flex flex-col items-center justify-center">
     <canvas
       id="canvas"
       ref="canvasRef"
       class="absolute inset-0 z-0"
       :style="{
-        ...(isSafari ? {
-          filter: `blur(${blur}px)`,
-          transform: `scale(${1 + (blur / 100)})`,
-        } : {}),
+        ...(isSafari
+          ? {
+              filter: `blur(${blur}px)`,
+              transform: `scale(${1 + blur / 100})`,
+            }
+          : {}),
       }"
     />
     <div class="relative z-10">
@@ -122,6 +126,4 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

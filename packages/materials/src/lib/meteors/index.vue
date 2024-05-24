@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<{
-  number?: number
-}>(), {
-  number: 20,
-})
+const props = withDefaults(
+  defineProps<{
+    number?: number
+  }>(),
+  {
+    number: 20,
+  },
+)
 
 const meteors = computed(() => {
   return Array(props.number || 20).fill(true)

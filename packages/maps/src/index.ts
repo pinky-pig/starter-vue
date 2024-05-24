@@ -4,8 +4,4 @@ import MapboxMap from './lib/MapboxMap.vue'
 import 'ol/ol.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-export {
-  OpenLayersMap,
-  LeafletMap,
-  MapboxMap,
-}
+export { OpenLayersMap, LeafletMap, MapboxMap }

@@ -59,10 +59,10 @@ onUnmounted(() => {
 
 function initCesiumViewer(option: any) {
   if (mapContainer.value) {
-    viewer = new Cesium.Viewer(
-      mapContainer.value,
-      { ...DEFAULT_OPTION, ...option },
-    )
+    viewer = new Cesium.Viewer(mapContainer.value, {
+      ...DEFAULT_OPTION,
+      ...option,
+    })
 
     emit('onload', viewer)
   }

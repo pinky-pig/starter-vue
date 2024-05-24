@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-withDefaults(defineProps<{
-  borderColor?: string
-}>(), {
-  borderColor: '#000000',
-})
+withDefaults(
+  defineProps<{
+    borderColor?: string
+  }>(),
+  {
+    borderColor: '#000000',
+  },
+)
 
 onMounted(() => {
   registerCSSHoudiniSquircle(document.documentElement)
@@ -15,8 +18,7 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
   const cssFrame = document.getElementById('squircle-css-script')
   if (cssFrame) {
     return null
-  }
-  else {
+  } else {
     const script = document.createElement('script')
     script.id = 'squircle-css-script'
     script.innerHTML = `
@@ -32,10 +34,10 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
 </script>
 
 <template>
-  <button class="bevel-btn h-full z-1 relative box-border ">
+  <button class="bevel-btn h-full z-1 relative box-border">
     <span class="edge" />
 
-    <div class="bevel-btn-inner bg-[var(--border-color)] w-full h-full ">
+    <div class="bevel-btn-inner bg-[var(--border-color)] w-full h-full">
       <div class="bevel-btn-content px-4 py-2 w-full h-full bg-gray-100">
         <slot />
       </div>

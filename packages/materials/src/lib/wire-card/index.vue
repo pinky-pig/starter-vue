@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-withDefaults(defineProps<{
-  borderColor?: string
-}>(), {
-  borderColor: '#1e293b',
-})
+withDefaults(
+  defineProps<{
+    borderColor?: string
+  }>(),
+  {
+    borderColor: '#1e293b',
+  },
+)
 
 onMounted(() => {
   registerCSSHoudiniSquircle(document.documentElement)
@@ -15,8 +18,7 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
   const cssFrame = document.getElementById('squircle-css-script')
   if (cssFrame) {
     return null
-  }
-  else {
+  } else {
     const script = document.createElement('script')
     script.id = 'squircle-css-script'
     script.innerHTML = `
@@ -32,7 +34,7 @@ function registerCSSHoudiniSquircle(root: HTMLElement) {
 </script>
 
 <template>
-  <div class="wire-card w-fit h-fit z-1 relative rounded-[.5rem] box-border ">
+  <div class="wire-card w-fit h-fit z-1 relative rounded-[.5rem] box-border">
     <div class="wire-card-inner bg-[var(--border-color)] w-full h-full p-1">
       <div class="wire-card-content w-full h-full bg-gray-100">
         <slot />

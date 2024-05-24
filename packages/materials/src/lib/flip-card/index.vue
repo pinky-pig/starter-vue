@@ -46,18 +46,25 @@ function handleClick() {
       right: align === 'right' ? `${alignOffset}px` : 'unset',
       top: `${topOffset}px`,
       transform: `rotate(${rotateAngle}deg)`,
-
     }"
   >
-    <div class="wx" :style="{ transform: isShowAnother ? 'rotateY(180deg)' : 'rotateY(0deg)' }" @click="handleClick">
+    <div
+      class="wx"
+      :style="{
+        transform: isShowAnother ? 'rotateY(180deg)' : 'rotateY(0deg)',
+      }"
+      @click="handleClick"
+    >
       <div class="qr">
         <div class="img-little" />
         <div class="img-little" />
         <div class="img-little" />
-        <img class="img" src="https://source.unsplash.com/random/512x512" alt="">
-        <div class="img-little">
-          图片1
-        </div>
+        <img
+          class="img"
+          src="https://source.unsplash.com/random/512x512"
+          alt=""
+        />
+        <div class="img-little">图片1</div>
       </div>
       <div class="text">
         <div class="text-wave-top" />
@@ -69,19 +76,40 @@ function handleClick() {
       </div>
 
       <div v-if="isShowClose" class="close" @click.stop="handleShowCard(false)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m7 7l10 10M7 17L17 7" /></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m7 7l10 10M7 17L17 7"
+          />
+        </svg>
       </div>
     </div>
 
-    <div class="zfb" :style="{ transform: !isShowAnother ? 'rotateY(180deg)' : 'rotateY(0deg)' }" @click="handleClick">
+    <div
+      class="zfb"
+      :style="{
+        transform: !isShowAnother ? 'rotateY(180deg)' : 'rotateY(0deg)',
+      }"
+      @click="handleClick"
+    >
       <div class="qr">
         <div class="img-little" />
         <div class="img-little" />
         <div class="img-little" />
-        <img class="img" src="https://source.unsplash.com/random/513x513" alt="">
-        <div class="img-little">
-          图片2
-        </div>
+        <img
+          class="img"
+          src="https://source.unsplash.com/random/513x513"
+          alt=""
+        />
+        <div class="img-little">图片2</div>
       </div>
       <div class="text">
         <div class="text-wave-top" />
@@ -93,7 +121,20 @@ function handleClick() {
       </div>
 
       <div v-if="isShowClose" class="close" @click="handleShowCard(false)">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m7 7l10 10M7 17L17 7" /></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m7 7l10 10M7 17L17 7"
+          />
+        </svg>
       </div>
     </div>
   </div>

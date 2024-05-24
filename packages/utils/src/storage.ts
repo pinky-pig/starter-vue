@@ -3,7 +3,10 @@ import localforage from 'localforage'
 /** The storage type */
 export type StorageType = 'local' | 'session'
 
-export function createStorage<T extends object>(type: StorageType, storagePrefix: string) {
+export function createStorage<T extends object>(
+  type: StorageType,
+  storagePrefix: string,
+) {
   const stg = type === 'session' ? window.sessionStorage : window.localStorage
 
   const storage = {
@@ -30,11 +33,9 @@ export function createStorage<T extends object>(type: StorageType, storagePrefix
 
         try {
           storageData = JSON.parse(json)
-        }
-        catch {}
+        } catch {}
 
-        if (storageData)
-          return storageData as T[K]
+        if (storageData) return storageData as T[K]
       }
 
       stg.removeItem(`${storagePrefix}${key as string}`)
@@ -51,10 +52,20 @@ export function createStorage<T extends object>(type: StorageType, storagePrefix
   return storage
 }
 
-type LocalForage<T extends object> = Omit<typeof localforage, 'getItem' | 'setItem' | 'removeItem'> & {
-  getItem: <K extends keyof T>(key: K, callback?: (err: any, value: T[K] | null) => void) => Promise<T[K] | null>
+type LocalForage<T extends object> = Omit<
+  typeof localforage,
+  'getItem' | 'setItem' | 'removeItem'
+> & {
+  getItem: <K extends keyof T>(
+    key: K,
+    callback?: (err: any, value: T[K] | null) => void,
+  ) => Promise<T[K] | null>
 
-  setItem: <K extends keyof T>(key: K, value: T[K], callback?: (err: any, value: T[K]) => void) => Promise<T[K]>
+  setItem: <K extends keyof T>(
+    key: K,
+    value: T[K],
+    callback?: (err: any, value: T[K]) => void,
+  ) => Promise<T[K]>
 
   removeItem: (key: keyof T, callback?: (err: any) => void) => Promise<void>
 }

@@ -1,9 +1,12 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
-  loading?: boolean
-}>(), {
-  loading: false,
-})
+withDefaults(
+  defineProps<{
+    loading?: boolean
+  }>(),
+  {
+    loading: false,
+  },
+)
 </script>
 
 <template>
@@ -14,7 +17,9 @@ withDefaults(defineProps<{
   >
     <span class="shadow" />
     <span class="edge" />
-    <span class="front min-w-[max(30vw,200px)] text-center text-lg font-medium md:min-w-[120px] md:text-base">
+    <span
+      class="front min-w-[max(30vw,200px)] text-center text-lg font-medium md:min-w-[120px] md:text-base"
+    >
       {{ loading ? 'Generating...' : 'Generate' }}
     </span>
   </button>

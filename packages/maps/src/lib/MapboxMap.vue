@@ -10,7 +10,8 @@ const props = withDefaults(
     options: () => ({
       center: [118.888175, 32.048268],
       style: 'mapbox://styles/pinky-pig/clgc32u1e004g01n2bitvj86a',
-      accessToken: 'pk.eyJ1IjoicGlua3ktcGlnIiwiYSI6ImNsZnJvZ2Q1cDAwZ3ozcG56bXFwbjAzZjAifQ.eEOFvRbKqZHQ3OxeqPBsXw',
+      accessToken:
+        'pk.eyJ1IjoicGlua3ktcGlnIiwiYSI6ImNsZnJvZ2Q1cDAwZ3ozcG56bXFwbjAzZjAifQ.eEOFvRbKqZHQ3OxeqPBsXw',
     }),
   },
 )
@@ -39,7 +40,7 @@ function initMap(option: any) {
 </script>
 
 <template>
-  <div ref="mapContainer" style="width: 100%; height: 100%;" />
+  <div ref="mapContainer" style="width: 100%; height: 100%" />
 </template>
 
 <style>

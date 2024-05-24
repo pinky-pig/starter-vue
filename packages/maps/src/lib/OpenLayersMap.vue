@@ -10,7 +10,8 @@ const props = withDefaults(
   }>(),
   {
     options: () => ({
-      view: new View({ // 地图视图
+      view: new View({
+        // 地图视图
         projection: 'EPSG:4326', // 坐标系，有EPSG:4326和EPSG:3857
         center: [114.064839, 22.548857], // 深圳坐标
         minZoom: 5, // 地图缩放最小级别
@@ -49,7 +50,7 @@ function initMap(option: any) {
 </script>
 
 <template>
-  <div ref="mapContainer" style="width: 100%; height: 100%;" />
+  <div ref="mapContainer" style="width: 100%; height: 100%" />
 </template>
 
 <style scoped>
