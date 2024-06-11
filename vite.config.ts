@@ -1,8 +1,8 @@
+/* eslint-disable node/prefer-global/process */
 /// <reference types="vitest" />
 
 import { resolve } from 'node:path'
-import type { PluginOption } from 'vite'
-import { defineConfig, loadEnv, mergeConfig } from 'vite'
+import { type PluginOption, defineConfig, loadEnv, mergeConfig } from 'vite'
 
 import CleanCSS from 'clean-css'
 import baseConfig from './vite.base.config'
@@ -31,9 +31,7 @@ export default defineConfig(({ mode }) => {
         cssCodeSplit: true,
         sourcemap: false,
         rollupOptions: {
-          external: [
-            'vue',
-          ],
+          external: ['vue'],
           output: [
             {
               format: 'umd',
@@ -49,14 +47,13 @@ export default defineConfig(({ mode }) => {
         },
       },
       publicDir: false,
-      plugins: <PluginOption> [
+      plugins: [
         {
           name: 'inline-css',
           transform(code, id) {
             const isCSS = (path: string) => /\.css$/.test(path)
 
-            if (!isCSS(id))
-              return
+            if (!isCSS(id)) return
             const cssCode = minify(code)
             cssCodeStr += cssCode
             return {
@@ -65,8 +62,7 @@ export default defineConfig(({ mode }) => {
             }
           },
           renderChunk(code, { isEntry }) {
-            if (!isEntry)
-              return
+            if (!isEntry) return
 
             return {
               code: `\
@@ -84,10 +80,9 @@ export default defineConfig(({ mode }) => {
             }
           },
         },
-      ],
+      ] as PluginOption,
     })
-  }
-  else {
+  } else {
     return mergeConfig(
       mergeConfig(baseConfig, {
         build: {
