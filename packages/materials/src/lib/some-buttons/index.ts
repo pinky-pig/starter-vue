@@ -3,6 +3,7 @@ import SketchButton from './SketchButton.vue'
 import SketchBlockButton from './SketchBlockButton.vue'
 import BevelButton from './BevelButton.vue'
 import OverlayLeft from './OverlayLeft.vue'
+import PolygonArrowButton from './PolygonArrowButton.vue'
 
 export {
   GenerateButton,
@@ -10,4 +11,5 @@ export {
   SketchBlockButton,
   BevelButton,
   OverlayLeft,
+  PolygonArrowButton,
 }
