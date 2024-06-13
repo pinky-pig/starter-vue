@@ -115,3 +115,8 @@ import CesiumMap from '@/cesium/CesiumMap.vue'
     />
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: home
+</route>

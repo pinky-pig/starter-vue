@@ -1,5 +1,6 @@
 import path, { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
+import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import VueRouter from 'unplugin-vue-router/vite'
@@ -17,6 +18,10 @@ export default {
   },
   plugins: [
     Vue(),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
+
     // ResolvedOptions: https://github.com/posva/unplugin-vue-router/blob/main/playground/vite.config.ts
     VueRouter({
       dts: 'src/typings/typed-router.d.ts',
@@ -33,9 +38,7 @@ export default {
         },
       ],
       dts: 'src/typings/auto-imports.d.ts',
-      dirs: [
-        './src/composables',
-      ],
+      dirs: ['./src/composables'],
       vueTemplate: true,
     }),
     Components({
