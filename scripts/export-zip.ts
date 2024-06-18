@@ -31,9 +31,7 @@ const archive = archiver('zip', {
 
 // 监听文件流的关闭事件
 output.on('close', () => {
-  console.log(
-    `Archive created successfully. Total size: ${archive.pointer()} bytes`,
-  )
+  console.log(`Dist 文件夹压缩成功. 总大小: ${archive.pointer()} bytes`)
 })
 
 // 监听文件流的错误事件
