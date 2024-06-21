@@ -4,7 +4,7 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --port 3333 --open --host",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "build": "vite build",
@@ -29,6 +29,7 @@
     "@arvin/utils": "workspace:^",
     "@types/cesium": "^1.70.0",
     "cesium": "^1.118.2",
+    "pinia": "^2.1.7",
     "vite-plugin-cesium": "^1.2.22"
   },
   "devDependencies": {
