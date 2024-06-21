@@ -85,6 +85,7 @@ export default defineConfig(({ mode }) => {
   } else {
     return mergeConfig(
       mergeConfig(baseConfig, {
+        base: process.env.VITE_BASE_URL,
         build: {
           outDir: 'dist',
         },

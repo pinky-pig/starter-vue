@@ -1,11 +1,5 @@
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
+<template>Custom Route</template>
 
-<template>
-  Custom Route
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>
