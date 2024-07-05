@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { Meteors } from '@arvin/materials'
+import { Meteors } from "@arvin/materials";
 </script>
 
 <template>
   <div class="">
-    <div class="w-full relative max-w-xs">
+    <div class="relative w-full max-w-xs">
       <div
-        class="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl"
+        class="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl"
       />
       <div
-        class="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start"
+        class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 px-4 py-8 shadow-xl"
       >
         <div
-          class="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500"
+          class="mb-4 flex h-5 w-5 items-center justify-center rounded-full border border-gray-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,16 +30,16 @@ import { Meteors } from '@arvin/materials'
           </svg>
         </div>
 
-        <h1 class="font-bold text-xl text-white mb-4 relative z-50">
+        <h1 class="relative z-50 mb-4 text-xl font-bold text-white">
           流星效果
         </h1>
 
-        <p class="font-normal text-base text-slate-500 mb-4 relative z-50">
+        <p class="relative z-50 mb-4 text-base font-normal text-slate-500">
           开发思路是有多个 `span` 标签，然后用 `animation` 属性添加帧动画
           `rotate translateX`。
         </p>
 
-        <p class="font-normal text-base text-slate-500 mb-4 relative z-50">
+        <p class="relative z-50 mb-4 text-base font-normal text-slate-500">
           流星的 DOM 实现： `span` 是圆，伪元素是尾巴。
         </p>
         <Meteors />

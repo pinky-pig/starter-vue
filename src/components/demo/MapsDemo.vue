@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MapboxMap, OpenLayersMap } from '@arvin/maps'
+import { MapboxMap, OpenLayersMap } from "@arvin/maps";
 </script>
 
 <template>
@@ -25,13 +25,13 @@ import { MapboxMap, OpenLayersMap } from '@arvin/maps'
       </div>
       <TabsContent
         value="Mapbox"
-        class="relative rounded-md border overflow-hidden"
+        class="relative overflow-hidden rounded-md border"
       >
         <MapboxMap class="!h-[400px]" />
       </TabsContent>
       <TabsContent
         value="OpenLayers"
-        class="relative rounded-md border overflow-hidden"
+        class="relative overflow-hidden rounded-md border"
       >
         <OpenLayersMap class="!h-[400px]" />
       </TabsContent>

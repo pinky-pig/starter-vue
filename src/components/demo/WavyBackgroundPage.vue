@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { WavyBackground } from '@arvin/materials'
+import { WavyBackground } from "@arvin/materials";
 </script>
 
 <template>
-  <WavyBackground class="w-full h-80 mx-auto rounded-2xl overflow-hidden">
-    <p class="text-4xl text-white font-bold inter-var text-center">
+  <WavyBackground class="mx-auto h-80 w-full overflow-hidden rounded-2xl">
+    <p class="inter-var text-center text-4xl font-bold text-white">
       Waves Background
     </p>
     <p
-      class="text-base md:text-lg mt-4 text-white font-normal inter-var text-center"
+      class="inter-var mt-4 text-center text-base font-normal text-white md:text-lg"
     >
       其实跟创建的 SVG Path 一样，不过是调用了 noise 生成。
     </p>
     <p
-      class="text-base md:text-lg mt-4 text-white font-normal inter-var text-center"
+      class="inter-var mt-4 text-center text-base font-normal text-white md:text-lg"
     >
       然后进行了动画封装， requestAnimationFrame 调用。
     </p>

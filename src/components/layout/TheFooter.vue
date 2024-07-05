@@ -1,7 +1,7 @@
 <template>
-  <nav class="mt-6 inline-flex gap-2 text-xl px-8 py-4">
+  <nav class="mt-6 inline-flex gap-2 px-8 py-4 text-xl">
     <button icon-btn @click="toggleDark">
-      <div class="i-carbon-sun dark:i-carbon-moon text-2xl" />
+      <div class="i-carbon-sun text-2xl dark:i-carbon-moon" />
     </button>
 
     <a
