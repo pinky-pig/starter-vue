@@ -65,6 +65,7 @@
     "pnpm": "^9.3.0",
     "postcss": "^8.4.38",
     "prettier": "^3.3.1",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "radix-vue": "^1.8.3",
     "rimraf": "^5.0.7",
     "shadcn-vue": "^0.10.5",
@@ -95,7 +96,12 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
-  },
-  "prettier": "@arvinn/prettier-config"
+    "*.{js,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  }
 }
