@@ -16,7 +16,8 @@ function minify(code: string) {
 let cssCodeStr = "";
 
 export default defineConfig(({ mode }) => {
-  process.env = Object.assign(process.env, loadEnv(mode, process.cwd()));
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+  // process.env = Object.assign(process.env, loadEnv(mode, process.cwd()));
 
   if (mode === "lib") {
     return mergeConfig(baseConfig, {
