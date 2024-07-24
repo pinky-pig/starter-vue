@@ -1,45 +1,45 @@
 /* eslint-disable node/prefer-global/process */
 /// <reference types="vitest" />
 
-import { resolve } from 'node:path'
-import { type PluginOption, defineConfig, loadEnv, mergeConfig } from 'vite'
+import { resolve } from "node:path";
+import { type PluginOption, defineConfig, loadEnv, mergeConfig } from "vite";
 
-import CleanCSS from 'clean-css'
-import baseConfig from './vite.base.config'
-import cesiumConfig from './vite.cesium.config'
+import CleanCSS from "clean-css";
+import baseConfig from "./vite.base.config";
+import cesiumConfig from "./vite.cesium.config";
 
-const cleanCssInstance = new CleanCSS({})
+const cleanCssInstance = new CleanCSS({});
 function minify(code: string) {
-  return cleanCssInstance.minify(code).styles
+  return cleanCssInstance.minify(code).styles;
 }
 
-let cssCodeStr = ''
+let cssCodeStr = "";
 
 export default defineConfig(({ mode }) => {
-  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
+  process.env = Object.assign(process.env, loadEnv(mode, process.cwd()));
 
-  if (mode === 'lib') {
+  if (mode === "lib") {
     return mergeConfig(baseConfig, {
       build: {
         lib: {
-          entry: resolve(__dirname, 'packages/index.ts'),
+          entry: resolve(__dirname, "packages/index.ts"),
           name: process.env.VITE_PKG_NAME,
           fileName: process.env.VITE_PKG_NAME,
         },
-        outDir: 'output-lib',
+        outDir: "output-lib",
         emptyOutDir: true,
         cssCodeSplit: true,
         sourcemap: false,
         rollupOptions: {
-          external: ['vue'],
+          external: ["vue"],
           output: [
             {
-              format: 'umd',
+              format: "umd",
               name: `${process.env.VITE_PKG_NAME}.umd.js`,
               entryFileNames: `${process.env.VITE_PKG_NAME}.umd.js`,
             },
             {
-              format: 'es',
+              format: "es",
               entryFileNames: `${process.env.VITE_PKG_NAME}.es.js`,
               preserveModules: false,
             },
@@ -49,20 +49,20 @@ export default defineConfig(({ mode }) => {
       publicDir: false,
       plugins: [
         {
-          name: 'inline-css',
+          name: "inline-css",
           transform(code, id) {
-            const isCSS = (path: string) => /\.css$/.test(path)
+            const isCSS = (path: string) => /\.css$/.test(path);
 
-            if (!isCSS(id)) return
-            const cssCode = minify(code)
-            cssCodeStr += cssCode
+            if (!isCSS(id)) return;
+            const cssCode = minify(code);
+            cssCodeStr += cssCode;
             return {
-              code: '',
-              map: { mappings: '' },
-            }
+              code: "",
+              map: { mappings: "" },
+            };
           },
           renderChunk(code, { isEntry }) {
-            if (!isEntry) return
+            if (!isEntry) return;
 
             return {
               code: `\
@@ -76,21 +76,21 @@ export default defineConfig(({ mode }) => {
               }\n
               __insertCSS(${JSON.stringify(cssCodeStr)})
               \n ${code}`,
-              map: { mappings: '' },
-            }
+              map: { mappings: "" },
+            };
           },
         },
       ] as PluginOption,
-    })
+    });
   } else {
     return mergeConfig(
       mergeConfig(baseConfig, {
         base: process.env.VITE_BASE_URL,
         build: {
-          outDir: 'dist',
+          outDir: "dist",
         },
       }),
       cesiumConfig,
-    )
+    );
   }
-})
+});
