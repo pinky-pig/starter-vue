@@ -4,6 +4,9 @@ export default arvinn(
   [
     {
       ignores: [".prettierrc"],
+      rules: {
+        "unicorn/filename-case": "off",
+      },
     },
     {
       files: ["src/**/*.ts"],
