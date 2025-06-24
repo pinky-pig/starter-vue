@@ -6,7 +6,6 @@ import {
   SketchButton,
   WireCard,
 } from "@arvin/materials";
-import CesiumMap from "@/cesium/CesiumMap.vue";
 </script>
 
 <template>
@@ -94,13 +93,6 @@ import CesiumMap from "@/cesium/CesiumMap.vue";
       <h2>Maps</h2>
 
       <MapsDemo />
-    </div>
-
-    <div class="mx-auto w-full max-w-[652px] px-[16px] text-start">
-      <br />
-      <br />
-      <h2>Cesium</h2>
-      <CesiumMap />
     </div>
 
     <br />
