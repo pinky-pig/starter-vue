@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "@arvinn/prettier-config",
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindAttributes": ["class"]
+}
+
+
