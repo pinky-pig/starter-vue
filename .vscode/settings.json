@@ -1,5 +1,7 @@
 {
-  // ========== Visuals ==========
+  // ======================================================
+  // 视觉效果
+  // ======================================================
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontFamily": "Consolas, monospace",
   "editor.fontSize": 16,
@@ -14,7 +16,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
-  // ========== Editor ========== 
+  // ========== Editor ==========
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
@@ -26,11 +28,6 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.stickyScroll.enabled": true,
   "editor.hover.sticky": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "never",
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
@@ -75,13 +72,13 @@
     "**/CHANGELOG*": true,
     "**/LICENSE*": true,
   },
-  // ==========  Global Level Config, needs to put in User Settings ========== 
-  "window.dialogStyle": "custom",
-  "window.nativeTabs": true, // this is great, macOS only
-  "window.title": "${rootName}", // this make tabs more readable
-  "window.titleBarStyle": "custom",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  // ========== Extension configs ========== 
+  // ======================================================
+  // 通用编辑器全局设置
+  // ======================================================
+  "window.title": "${rootName}",
+  // ======================================================
+  // 扩展配置
+  // ======================================================
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
   "errorLens.enabledDiagnosticLevels": [
@@ -93,12 +90,20 @@
     "Grammarly",
     "eslint"
   ],
-  // ESLint config: https://github.com/antfu/eslint-config
+  // ======================================================
+  // ESLint 和 Prettier 扩展配置
+  // ======================================================
+  "editor.formatOnSave": true,
+  "prettier.enable": true,
+  "editor.codeActionsOnSave": {
+    // 保存时自动运行 ESLint 的修复功能，"explicit" 是一个更安全的选择，避免不必要的修复。
+    "source.fixAll.eslint": "explicit"
+  },
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
   "eslint.quiet": true,
-  // Silent the stylistic rules in you IDE, but still auto fix them
+  // 静默 IDE 中的样式规则，但仍然自动修复它们
   "eslint.rules.customizations": [
     {
       "rule": "style/*",
@@ -154,11 +159,6 @@
     "yaml",
     "toml"
   ],
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": false,
-  },
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,en-US",
   "css.lint.hexColorLength": "ignore",
@@ -215,15 +215,9 @@
   "i18n-ally.ignoredLocales": [],
   "iconify.annotations": true,
   "iconify.inplace": true,
-  "svg.preview.mode": "svg",
-  // I only use Prettier for manually formatting
-  "prettier.enable": false,
-  "prettier.printWidth": 200,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  // ========== File Nesting ==========
-  // this might not be up to date with the repo, please check yourself
-  // https://github.com/antfu/vscode-file-nesting-config
+  // ========== VSCode 的文件嵌套 ==========
+  // VSCode 默认支持，不用下载插件
+  // 下面的这个设置是直接抄的 https://github.com/antfu/vscode-file-nesting-config
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
@@ -301,5 +295,44 @@
     "*.tsx": "typescriptreact",
     "*.json": "jsonc",
     "*.code-snippets": "jsonc"
+  },
+  // ======================================================
+  // 为有多个格式化工具竞争的语言，明确指定 Prettier。
+  // ======================================================
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

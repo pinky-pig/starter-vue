@@ -7,7 +7,7 @@ import VueRouter from "unplugin-vue-router/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import { defineConfig } from "vite";
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({  }) => {
   return {
     resolve: {
       alias: {
@@ -20,10 +20,10 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       Vue(),
-  
+
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),
-  
+
       // ResolvedOptions: https://github.com/posva/unplugin-vue-router/blob/main/playground/vite.config.ts
       VueRouter({
         dts: "src/typings/typed-router.d.ts",
