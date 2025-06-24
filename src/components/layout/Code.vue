@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getHighlighter } from "shiki";
+import { createHighlighter } from "shiki";
 
 // 所有的主题：import { bundledThemes } from 'shiki'
 // 支持的语言：import { bundledLanguages } from 'shiki'
@@ -21,7 +21,7 @@ const props = withDefaults(
   },
 );
 
-const highlighter = await getHighlighter({
+const highlighter = await createHighlighter({
   themes: [
     "github-light",
     "vitesse-light",
