@@ -7,7 +7,7 @@ import VueRouter from "unplugin-vue-router/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import { defineConfig } from "vite";
 
-export default defineConfig(({  }) => {
+export default defineConfig(() => {
   return {
     resolve: {
       alias: {
@@ -57,5 +57,5 @@ export default defineConfig(({  }) => {
         dts: "src/typings/components.d.ts",
       }),
     ],
-  }
+  };
 });
