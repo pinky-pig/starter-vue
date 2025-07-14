@@ -1,5 +1,4 @@
 @import './view-transition-api.css';
-@import 'vue-sonner/style.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
