@@ -25,6 +25,8 @@
     "@arvinn/eslint-config": "^0.0.10",
     "@arvinn/prettier-config": "^0.0.3",
     "@arvinn/vscode-settings": "^0.0.3",
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.8.8",
     "@egoist/tailwindcss-icons": "^1.9.0",
     "@iconify-json/carbon": "^1.2.14",
     "@iconify-json/lucide": "^1.2.71",

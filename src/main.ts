@@ -3,10 +3,17 @@ import App from './App.vue'
 import './styles/global.css'
 import { setupRouter } from './router'
 import { setupStore } from './store'
+import { setupElementPlus } from './setup'
 
-const app = createApp(App)
+async function setupApp() {
+  const app = createApp(App)
 
-setupRouter(app)
-setupStore(app)
+  setupElementPlus(app)
+  // 挂载 pinia
+  await setupStore(app)
+  await setupRouter(app)
 
-app.mount('#app')
+  app.mount('#app')
+}
+
+setupApp()
