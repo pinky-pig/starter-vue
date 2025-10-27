@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router/auto'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { routes } from 'vue-router/auto-routes'
 import { createRouterGuard } from './guard'
@@ -14,7 +14,7 @@ const router = createRouter({
       component: () => import('../pages/custom.vue'),
       path: '/custom-route',
     },
-  ]),
+  ]) as readonly RouteRecordRaw[],
 })
 
 export async function setupRouter(app: App) {
