@@ -1,6 +1,7 @@
 @import './view-transition-api.css';
 @import './tailwind.css';
 @import './scrollbar.css';
+@import './simplebar.css';
 
 h2 {
   font-size: 16px;

@@ -19,7 +19,8 @@
     "@arvin/maps": "workspace:^",
     "@arvin/materials": "workspace:^",
     "@arvin/utils": "workspace:^",
-    "pinia": "^3.0.3"
+    "pinia": "^3.0.3",
+    "simplebar-vue": "2.3.4"
   },
   "devDependencies": {
     "@arvinn/eslint-config": "^0.0.10",

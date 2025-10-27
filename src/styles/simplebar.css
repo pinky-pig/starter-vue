@@ -1,0 +1,15 @@
+
+@import 'simplebar-vue/dist/simplebar.min.css'
+
+/*
+ * 为 simplebar 的可聚焦区域移除 border
+ * 不然按下空格会有一个黄色边框
+ */
+.simplebar-content-wrapper:focus-visible {
+  outline: 0px solid #18a058; /* 举例：换成一个漂亮的绿色边框 */
+  outline-offset: -2px;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #e1e7fa !important;
+}
