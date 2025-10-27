@@ -15,7 +15,7 @@ const router = createRouter({
       name: 'customRoute',
       path: '/custom-route',
       meta: {
-        // layout: '404', // 如果不使用 vite-plugin-pages，这里指定 layout 也可以
+        // layout: '404', // 如果不使用 vue-router/auto-routes，这里指定 layout 也可以
       },
     },
   ]) as readonly RouteRecordRaw[],
