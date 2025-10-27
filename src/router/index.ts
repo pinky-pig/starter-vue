@@ -11,8 +11,12 @@ const router = createRouter({
   routes: setupLayouts([
     ...routes,
     {
-      component: () => import('../pages/custom.vue'),
+      component: () => import('@/pages/custom.vue'),
+      name: 'customRoute',
       path: '/custom-route',
+      meta: {
+        // layout: '404', // 如果不使用 vite-plugin-pages，这里指定 layout 也可以
+      },
     },
   ]) as readonly RouteRecordRaw[],
 })
