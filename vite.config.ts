@@ -6,6 +6,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import VueRouter from "unplugin-vue-router/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(() => {
   return {
@@ -20,6 +21,7 @@ export default defineConfig(() => {
     },
     plugins: [
       Vue(),
+      tailwindcss(),
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),
