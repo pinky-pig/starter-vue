@@ -7,6 +7,8 @@ import VueRouter from "unplugin-vue-router/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
+import Pages from 'vite-plugin-pages'
+
 
 export default defineConfig(() => {
   return {
@@ -25,6 +27,10 @@ export default defineConfig(() => {
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),
+      Pages({
+        // 关键配置在这里，移除 components 目录
+        exclude: ['**/components/**/*'],
+      }),
 
       // ResolvedOptions: https://github.com/posva/unplugin-vue-router/blob/main/playground/vite.config.ts
       VueRouter({
