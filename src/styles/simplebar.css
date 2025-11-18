@@ -1,6 +1,4 @@
 
-@import 'simplebar-vue/dist/simplebar.min.css'
-
 /*
  * 为 simplebar 的可聚焦区域移除 border
  * 不然按下空格会有一个黄色边框
